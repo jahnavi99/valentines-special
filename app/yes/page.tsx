@@ -1,45 +1,67 @@
 "use client";
 
-import { motion } from "framer-motion";
+import Image from "next/image";
+import { useEffect, useState } from "react";
+import { Great_Vibes } from "next/font/google";
+
+const greatVibes = Great_Vibes({
+  subsets: ["latin"],
+  weight: "400",
+});
+
 
 export default function YesPage() {
+  const [hearts, setHearts] = useState<number[]>([]);
+
+  useEffect(() => {
+    const heartArray = Array.from({ length: 25 }, (_, i) => i);
+    setHearts(heartArray);
+  }, []);
+
   return (
-    <main className="min-h-[100dvh] w-full flex items-center justify-center bg-gradient-to-br from-red-200 via-pink-200 to-rose-200 px-4">
-      <motion.section
-        initial={{ scale: 0.9, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        className="
-          w-full
-          max-w-sm
-          sm:max-w-md
-          bg-white/85
-          backdrop-blur
-          rounded-2xl
-          shadow-xl
-          p-8
-          sm:p-10
-          flex
-          flex-col
-          items-center
-          text-center
-        "
-      >
-        <h1 className="text-3xl sm:text-4xl font-bold text-rose-600 mb-6">
-          YAY!!! 💕
-        </h1>
+    <div className="relative min-h-screen flex items-center justify-center bg-pink-100 overflow-hidden px-6">
 
-        <p className="text-base sm:text-lg text-gray-700 mb-4">
-          I knew you’d say yes 🥰
+      {/* Falling Hearts */}
+      {hearts.map((heart) => (
+        <span
+          key={heart}
+          className="heart"
+          style={{
+            left: `${Math.random() * 100}%`,
+            animationDuration: `${4 + Math.random() * 4}s`,
+            fontSize: `${16 + Math.random() * 24}px`
+          }}
+        >
+          ❤️
+        </span>
+      ))}
+      <div className="relative min-h-screen bg-pink-100 overflow-hidden flex flex-col items-center justify-center px-6">
+
+      {/* Content Box */}
+      <div className="bg-white p-8 rounded-3xl shadow-2xl text-center max-w-lg w-full">
+
+        <h3 className=" md:text-2xl font-bold text-pink">
+          Brathikipoyav !!! <br/>
+          Good boy 😌 you chose "Yes" <br />
+          Lekunte anthe Sangathi 😜
+        </h3>
+
+      <p className={`${greatVibes.className} shiny-text text-center`}>
+          Happy Valentine's Day and Happy Anniversary my love ❤️
         </p>
 
-        <p className="text-gray-700">
-          Happy Valentine’s Day, my love ❤️
-          <br />
-          Forever your Valentine.
-        </p>
+        <div className="flex justify-center">
+          <Image
+            src="/Sarath.jpeg"
+            alt="My Love"
+            width={250}
+            height={250}
+            className="rounded-2xl shadow-lg"
+          />
+        </div>
 
-        <div className="text-4xl mt-6">💖💖💖</div>
-      </motion.section>
-    </main>
+      </div>
+    </div>
+    </div>
   );
 }
