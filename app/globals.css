@@ -93,3 +93,36 @@ body {
   }
 }
 
+.animate-pop {
+  animation: popHeart 1.5s ease-out forwards;
+}
+
+@keyframes popHeart {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  80% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.heart-container {
+  width: 280px;
+  height: 260px;
+  filter: drop-shadow(0 0 20px hotpink);
+}
+
+.heart-svg {
+  width: 100%;
+  height: 100%;
+}
+
+

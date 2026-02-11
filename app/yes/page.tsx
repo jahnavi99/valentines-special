@@ -50,18 +50,31 @@ export default function YesPage() {
           Happy Valentine's Day and Happy Anniversary my love ❤️
         </p>
 
-        <div className="flex justify-center">
-          <Image
-            src="/Sarath.jpeg"
-            alt="My Love"
-            width={250}
-            height={250}
-            className="rounded-2xl shadow-lg"
-          />
-        </div>
+       <div className="flex justify-center mt-8">
+  <div className="heart-container animate-pop">
+    <svg viewBox="0 0 32 29.6" className="heart-svg">
+      <defs>
+        <clipPath id="heartClip">
+          <path d="M23.6,0c-3.4,0-6.3,2.4-7.6,4.8C14.7,2.4,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4
+          c0,9.4,16,21.2,16,21.2s16-11.8,16-21.2C32,3.8,28.2,0,23.6,0z"/>
+        </clipPath>
+      </defs>
+
+      <image
+        href="/Sarath.jpeg"
+        width="100%"
+        height="100%"
+        preserveAspectRatio="xMidYMid slice"
+        clipPath="url(#heartClip)"
+      />
+    </svg>
+  </div>
+</div>
+
+</div>
+
 
       </div>
-    </div>
     </div>
   );
 }
