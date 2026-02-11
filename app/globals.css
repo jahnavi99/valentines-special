@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Full height fix */
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Prevent overflow issues on mobile */
+body {
+  overflow-x: hidden;
+}
+
+@layer components {
+  .pink-box {
+    position: relative;   
+    background-color: hotpink;
+    padding: 40px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center; 
+  }
+}
+
+/*.pink-box {
+  background: hotpink;
+  padding: 40px;
+  border-radius: 20px;
+  
+}*/
