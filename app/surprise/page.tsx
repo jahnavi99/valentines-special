@@ -135,7 +135,7 @@ const [showVideo, setShowVideo] = useState(false);
       </h2>
 
       <video
-        src="/memories.mp4"
+        src="/videofinal.mov"
         controls
         autoPlay
         className="rounded-2xl shadow-2xl w-[800px] md:w-[900px]"
