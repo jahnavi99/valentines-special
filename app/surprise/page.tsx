@@ -94,7 +94,7 @@ const [showVideo, setShowVideo] = useState(false);
     <>
       <h1 className="text-3xl font-bold text-pink-600 mb-8">
         Oh wait not so fast for the reveal 😌 <br />
-        Solve this love puzzle first 💕
+        Let's see how well you remembered my face. Solve this puzzle first 💕
       </h1>
 
       <div className="grid grid-cols-3 gap-2 w-[450px] h-[450px]">
@@ -131,14 +131,14 @@ const [showVideo, setShowVideo] = useState(false);
   {showVideo && (
     <div className="fade-in">
       <h2 className="text-3xl font-bold text-pink-600 mb-6">
-        Our Beautiful Memories 💗
+        Our unforgettable Memories in these 2 years 💗
       </h2>
 
       <video
         src="/memories.mp4"
         controls
         autoPlay
-        className="rounded-2xl shadow-2xl max-w-2xl w-full"
+        className="rounded-2xl shadow-2xl w-[800px] md:w-[900px]"
       />
     </div>
   )}
